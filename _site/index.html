@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about work...">
+<meta name="keywords" content="getting_started,  sample homepage">
+<title>Getting started with the Documentation Theme for Jekyll | Jekyll theme for documentation</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://idratherbewriting.com/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Jekyll Documentation Theme</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jekyll Resources<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://github.com/tomjohnson1492/documentation-theme-jekyll" target="_blank">Github Repo</a></li>
+                        
+                        
+                        
+                        <li><a href="https://talk.jekyllrb.com" target="_blank">Jekyll Talk</a></li>
+                        
+                        
+                        
+                        <li><a href="http://jekyllrb.com/docs/home/" target="_blank">Jekyll documentation</a></li>
+                        
+                        
+                        
+                        <li><a href="http://stackoverflow.com/questions/tagged/jekyll" target="_blank">Jekyll on Stack Overflow</a></li>
+                        
+                        
+                        
+                        <li><a href="http://idratherbewriting.com/category-jekyll/" target="_blank">Jekyll on my blog</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="mydoc_introduction.html">Jekyll Documentation Theme</a></li>
+                        
+                        
+                        
+                        <li><a href="p1_landing_page.html">Product 1</a></li>
+                        
+                        
+                        
+                        <li><a href="p2_landing_page.html">Product 2</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:tomjohnson1492@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the Getting started with the Documentation Theme for Jekyll page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Getting started with the Documentation Theme for Jekyll">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Jekyll Doc Theme 6.0</li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Overview</a>
+        <ul>
+            
+            
+            
+            <li class="active"><a href="index.html">Get started</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_introduction.html">Introduction</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_supported_features.html">Supported features</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_about.html">About the theme author</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_support.html">Support</a></li>
+            
+            
+            
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Release Notes</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_release_notes_60.html">6.0 Release notes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_release_notes_50.html">5.0 Release notes</a></li>
+            
+            
+            
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Installation</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_about_ruby_gems_etc.html">About Ruby, Gems, Bundler, etc.</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_install_jekyll_on_mac.html">Install Jekyll on Mac</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_install_jekyll_on_windows.html">Install Jekyll on Windows</a></li>
+            
+            
+            
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Authoring</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_pages.html">Pages</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_posts.html">Posts</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_lists.html">Lists</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_conditional_logic.html">Conditional logic</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_content_reuse.html">Content reuse</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_collections.html">Collections</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_webstorm_text_editor.html">WebStorm editor tips</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_atom_text_editor.html">Atom editor tips</a></li>
+            
+            
+            
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Navigation</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_sidebar_navigation.html">Sidebar navigation</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_yaml_tutorial.html">YAML tutorial in the context of Jekyll</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_tags.html">Tags</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_series.html">Series</a></li>
+            
+            
+            
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Formatting</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_adding_tooltips.html">Tooltips</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_alerts.html">Alerts</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_icons.html">Icons</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_images.html">Images</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_code_samples.html">Code samples</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_labels.html">Labels</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_hyperlinks.html">Links</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_navtabs.html">Navtabs</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_tables.html">Tables</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_syntax_highlighting.html">Syntax highlighting</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_workflow_maps.html">Workflow maps</a></li>
+            
+            
+            
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Handling reviews</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_commenting_on_files.html">Commenting on files</a></li>
+            
+            
+            
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Publishing</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_build_arguments.html">Build arguments</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_themes.html">Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_generating_pdfs.html">Generating PDFs</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_help_api.html">Help APIs and UI tooltips</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_search_configuration.html">Search configuration</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_iterm_profiles.html">iTerm profiles</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_push_build_to_server.html">Pushing builds to server</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_no_password_prompts_scp.html">Getting around the password prompts in SCP</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_publishing_github_pages.html">Publishing on Github Pages</a></li>
+            
+            
+            
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Special layouts</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_kb_layout.html">Knowledge-base layout</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_glossary.html">Glossary layout</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_faq_layout.html">FAQ layout</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_scroll.html">Scroll layout</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="mydoc_shuffle.html">Shuffle layout</a></li>
+            
+            
+            
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Troubleshooting</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_troubleshooting.html">Troubleshooting</a></li>
+            
+            
+            
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Tag archives</a>
+        <ul>
+            
+            
+            
+            <li><a href="mydoc_tag_archives_overview.html">Tag archives overview</a></li>
+            
+            
+            
+            <li class="subfolders">
+                <a href="#">Tag archive pages</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="tag_formatting.html">Formatting pages</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="tag_navigation.html">Navigation pages</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="tag_content_types.html">Content types pages</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="tag_publishing.html">Publishing pages</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="tag_special_layouts.html">Special layout pages</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="tag_collaboration.html">Collaboration pages</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="tag_troubleshooting.html">Troubleshooting pages</a></li>
+                    
+                    
+                    
+                </ul>
+            </li>
+            
+            
+            
+            
+        </ul>
+     </li>
+       
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Getting started with the Documentation Theme for Jekyll</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.</div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+    <a target="_blank" href="https://github.com/tomjohnson1492/documentation-theme-jekyll/blob/gh-pages//index.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+
+    
+
+  <h2 id="section">构建使用主题</h2>
+
+<p>通过以下的的介绍来构建使用该主题</p>
+
+<h3 id="section-1">1. 主题下载</h3>
+
+<p>在<a href="https://github.com/tomjohnson1492/documentation-theme-jekyll">Github</a>上下载或者clone这个主题.一旦你定制好了主题,最好不要使用git pull来更新他。建议在Github上点击<em>Clone or download</em>按钮，然后选择<strong>Download ZIP</strong>。</p>
+
+<h3 id="jekyll">2. 安装Jekyll</h3>
+
+<p>如果你的机器上没有安装使用过Jekyll，一下的介绍将会安装Jekyll</p>
+
+<ul>
+  <li><a href="mydoc_install_jekyll_on_mac.html">在Mac上安装Jekyll</a></li>
+  <li><a href="mydoc_install_jekyll_on_windows.html">在Windows上安装Jekyll</a></li>
+</ul>
+
+<h3 id="bundler">3. 安装 Bundler</h3>
+
+<p>如果没有安装Bundler就安装他：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>gem install bundler
+</code></pre>
+</div>
+
+<p>你需要确认环境中所有的Ruby gems的<a href="http://bundler.io/">Bundler</a>正常使用，Bundler依赖对应版本的gems</p>
+
+<h3 id="option1">4. Option 1: 安装主题 (<em>without</em> the github-pages gem)</h3>
+
+<p>如果你不打算在<a href="https://pages.github.com/">Github Pages</a>上开发你的Jekyll站点，就是用下面的操作。</p>
+
+<p>Bundler的Gemfile需要指定，他能管理项目的软件依赖。尽管该项目已经包含了一个Gemfile，但这个主题除了Jekylly外没有任何依赖。
+这个Gemfile被用来指定开饭到Github Pages需要的gems。<strong>如果你不打算在GitHub上开放的Jekyll项目，删除项目主目录下的这两个文件</strong></p>
+
+<ul>
+  <li>Gemfile</li>
+  <li>Gemfile.lock</li>
+</ul>
+
+<p>如果你没有在你的机器上运行过Jekyll(可以使用<code class="highlighter-rouge">jekyll --version</code>),你需要安装jekyll gem:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>gem install jekyll
+</code></pre>
+</div>
+
+<p>现在运行jekyll 服务(需要跳转到项目的主目录中(<code class="highlighter-rouge">cd</code>)):</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>jekyll serve
+</code></pre>
+</div>
+
+<h3 id="option2">4. Option 2: 安装 (<em>with</em> the github-pages gem)</h3>
+
+<p>如果你在Github Pages开放你的项目，保留Gemfile和Gemfile.local文件。Gemfile告诉Jekyll使用Github-pages gem。<strong>然而，注意你不能使用命令<code class="highlighter-rouge">jekyll server</code>，他依赖最新版本的Jekyll和Github Pages</strong>(该问题已经被记录<a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/">briefly here</a>).</p>
+
+<p>你需要使用Bundler来解决依赖，使用Bundler来安装所有的Ruby Gems依赖:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bundle update
+</code></pre>
+</div>
+
+<p>通常使用这个命令来运行Jekyll:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bundle exec jekyll serve
+</code></pre>
+</div>
+
+<p>如果你想使用更加精炼的命令，你可以将这个命令放在一个脚本中jekyll.sh，然后使用简单命令来运行Jekyll<code class="highlighter-rouge">. jekyll.sh</code></p>
+
+<h2 id="docker">在Docker中运行站点</h2>
+
+<p>你可以在你的机器上使用Docker直接构建一个运行的站点。只需要在项目目录中下载repo文件和运行下面这条命令</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker build --no-cache -t mydocs .
+</code></pre>
+</div>
+
+<p>一旦Docker Images构建完成，你可以挂载和使用整个站点:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker run -v "$PWD:/src" -p 4000:4000 mydocs serve -H 0.0.0.0
+</code></pre>
+</div>
+
+<p>这或许是最简单方法来构建你的站点了。</p>
+
+<h2 id="sidebar">配置侧边导航(sidebar)</h2>
+
+<p>这个主题中有多个效果(products).每个效果使用不同的侧边导航.实际上是为了区分不同类型的文档使用不同的侧边导航.这个思路是由于用户阅读文档时要有一个合适侧边导航。(你可以获取更多的关于侧边导航信息在<a href="http://idratherbewriting.com/2016/03/23/release-of-documentation-theme-for-jekyll-50/">这个Blog中</a>.)</p>
+
+<p>同样保留的顶面水平导航(navigation)，因为他运行用户快速跳转不同的产品内容。侧边导航需要适配不同的产品</p>
+
+<p>由于每个产品使用不同的侧边导航，你需要设置你的站点的侧边导航。他是在 _includes/custom 目录中 “sidebarconfigs.html”的文件。这个文件控制哪种侧边导航关联何种产品。打开这个文件查看内容</p>
+
+<p>sidebarconfigs.html文件使用简单的<code class="highlighter-rouge">if elsif</code>逻辑设置一个变量，logic to set a variable that the sidebar.html file uses to read the sidebar data file. sidebarconfigs.html中的代码就像这样:</p>
+
+<div class="language-liquid highlighter-rouge"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">sidebar</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"home_sidebar"</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sidebar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">sidebars</span><span class="p">.</span><span class="nv">home_sidebar</span><span class="p">.</span><span class="nv">entries</span><span class="w"> </span><span class="p">%}</span>
+
+<span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">sidebar</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"product1_sidebar"</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sidebar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">sidebars</span><span class="p">.</span><span class="nv">product1_sidebar</span><span class="p">.</span><span class="nv">entries</span><span class="w"> </span><span class="p">%}</span>
+
+<span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">sidebar</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"product2_sidebar"</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sidebar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">sidebars</span><span class="p">.</span><span class="nv">product2_sidebar</span><span class="p">.</span><span class="nv">entries</span><span class="w"> </span><span class="p">%}</span>
+
+<span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">sidebar</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"mydoc_sidebar"</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sidebar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">sidebars</span><span class="p">.</span><span class="nv">mydoc_sidebar</span><span class="p">.</span><span class="nv">entries</span><span class="w"> </span><span class="p">%}</span>
+
+<span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sidebar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">sidebars</span><span class="p">.</span><span class="nv">home_sidebar</span><span class="p">.</span><span class="nv">entries</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+</code></pre>
+</div>
+
+<p>In each page’s frontmatter, you must specify the sidebar you want that page to use. Here’s an example of the page frontmatter showing the sidebar property:
+每个页面的frontmatter都需要指定一个sidbar，下面这是一个例子:</p>
+
+<pre>
+---
+title: Alerts
+tags: [formatting]
+keywords: notes, tips, cautions, warnings, admonitions
+last_updated: July 3, 2016
+summary: "You can insert notes, tips, warnings, and important alerts in your content. These notes are stored as shortcodes made available through the linksrefs.hmtl include."
+<span class="red">sidebar: mydoc_sidebar</span>
+permalink: mydoc_alerts
+---
+</pre>
+
+<p>这里 <code class="highlighter-rouge">sidebar: mydoc_sidebar</code> 会链接到 _data/sidebars/mydoc_sidebar.yml 文件 (意思是, mydoc_sidebar.yml 文件插入到 sidebars子目录\data中).</p>
+
+<p>如果在frontmatter没有指定sidebar，就会使用默认的sidebar(<code class="highlighter-rouge">else</code>指定的内容，即<code class="highlighter-rouge">site.data.sidebars.home_sidebar.entries</code>)</p>
+
+<p>注意你的sidebar只能包含2层，每个product都有自己的侧边导航，这样分类深度就足够了，就像有了3层深度了。不建议有更深层次的分类嵌套</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Note that each level must have at least one topic before the next level starts. You can’t have a second level that contains multiple third levels without having at least one standalone topic in the second level.</div>
+
+<p>你可以在任意页面打开或者关闭侧边导航(例如:首页).关闭页面侧边导航，就是设置页面的frontmatter tag为<code class="highlighter-rouge">hide_sidebar:true</code></p>
+
+<p>更多关于侧边导航的信息，查看<a href="mydoc_sidebar_navigation.html">Sidebar navigation</a></p>
+
+<h2 id="section-2">侧边导航的语法</h2>
+
+<p>侧边导航的配置文件使用YAML语法,下面给出一个例子：</p>
+
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">entries</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">sidebar</span>
+  <span class="s">product</span><span class="pi">:</span> <span class="s">Jekyll Doc Theme</span>
+  <span class="s">version</span><span class="pi">:</span> <span class="s">6.0</span>
+  <span class="s">folders</span><span class="pi">:</span>
+
+  <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">Overview</span>
+    <span class="s">output</span><span class="pi">:</span> <span class="s">web, pdf</span>
+    <span class="s">folderitems</span><span class="pi">:</span>
+
+    <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">Get started</span>
+      <span class="s">url</span><span class="pi">:</span> <span class="s">/index.html</span>
+      <span class="s">output</span><span class="pi">:</span> <span class="s">web, pdf</span>
+
+    <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">Introduction</span>
+      <span class="s">url</span><span class="pi">:</span> <span class="s">/mydoc_introduction.html</span>
+      <span class="s">output</span><span class="pi">:</span> <span class="s">web, pdf</span>
+
+    <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">Supported features</span>
+      <span class="s">url</span><span class="pi">:</span> <span class="s">/mydoc_supported_features.html</span>
+      <span class="s">output</span><span class="pi">:</span> <span class="s">web, pdf</span>
+
+    <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">About the theme author</span>
+      <span class="s">url</span><span class="pi">:</span> <span class="s">/mydoc_about.html</span>
+      <span class="s">output</span><span class="pi">:</span> <span class="s">web, pdf</span>
+
+    <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">Support</span>
+      <span class="s">url</span><span class="pi">:</span> <span class="s">/mydoc_support.html</span>
+      <span class="s">output</span><span class="pi">:</span> <span class="s">web, pdf</span>
+
+  <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">Release Notes</span>
+    <span class="s">output</span><span class="pi">:</span> <span class="s">web, pdf</span>
+    <span class="s">folderitems</span><span class="pi">:</span>
+
+    <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">6.0 Release notes</span>
+      <span class="s">url</span><span class="pi">:</span> <span class="s">/mydoc_release_notes_60.html</span>
+      <span class="s">output</span><span class="pi">:</span> <span class="s">web, pdf</span>
+
+    <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">5.0 Release notes</span>
+      <span class="s">url</span><span class="pi">:</span> <span class="s">/mydoc_release_notes_50.html</span>
+      <span class="s">output</span><span class="pi">:</span> <span class="s">web, pdf</span>
+
+</code></pre>
+</div>
+
+<p>每个<code class="highlighter-rouge">folder</code>或者<code class="highlighter-rouge">subfolder</code>必须包含<code class="highlighter-rouge">title</code>和<code class="highlighter-rouge">output</code>所属。每个<code class="highlighter-rouge">folderitem</code>or<code class="highlighter-rouge">subfolderitem</code>必须包含<code class="highlighter-rouge">title</code>,<code class="highlighter-rouge">url</code>和<code class="highlighter-rouge">output</code>所属</p>
+
+<p>只有<code class="highlighter-rouge">web</code>和<code class="highlighter-rouge">pdf</code>两个outputs可用.(即使你不出版成PDF,你仍然需要指明<code class="highlighter-rouge">output:web</code>)</p>
+
+<p>YAML语法依赖空格缩进，因此确保你的pattern是属于相同的侧边导航分类。查看<a href="mydoc_yaml_tutorial">YAML tutorial</a>可以了解更详细的关于YAML的配置</p>
+
+<p>To accommodate the title page and table of contents in PDF outputs, each product sidebar must list these pages before any other:</p>
+
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="pi">-</span> <span class="s">title</span><span class="pi">:</span>
+  <span class="s">output</span><span class="pi">:</span> <span class="s">pdf</span>
+  <span class="s">type</span><span class="pi">:</span> <span class="s">frontmatter</span>
+  <span class="s">folderitems</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span>
+    <span class="s">url</span><span class="pi">:</span> <span class="s">/titlepage</span>
+    <span class="s">output</span><span class="pi">:</span> <span class="s">pdf</span>
+    <span class="s">type</span><span class="pi">:</span> <span class="s">frontmatter</span>
+  <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span>
+    <span class="s">url</span><span class="pi">:</span> <span class="s">/tocpage</span>
+    <span class="s">output</span><span class="pi">:</span> <span class="s">pdf</span>
+    <span class="s">type</span><span class="pi">:</span> <span class="s">frontmatter</span>
+</code></pre>
+</div>
+
+<p>Leave the output as <code class="highlighter-rouge">output: pdf</code> for these frontmatter pages so that they don’t appear in the web output.</p>
+
+<p>更详细在<a href="mydoc_sidebar_navigation.html">Sidebar navigation</a>和<a href="mydoc_yaml_tutorial.html">YAML tutorial</a></p>
+
+<h2 id="section-3">相关链接和离线预览</h2>
+
+<p>This theme uses relative links throughout so that you can view the site offline and not worry about which server or directory you’re hosting it. It’s common with tech docs to push content to an internal server for review prior to pushing the content to an external server for publication. Because of the need for seamless transferrence from one host to another, the site has to use relative links.</p>
+
+<p>To view pages locally on your machine (without the Jekyll preview server), they need to have the <code class="highlighter-rouge">.html</code> extension. The <code class="highlighter-rouge">permalink</code> property in the page’s frontmatter (without surrounding slashes) is what pushes the files into the root directory when the site builds.</p>
+
+<h2 id="page-frontmatter">Page frontmatter</h2>
+
+<p>When you write pages, include these same frontmatter properties with each page:</p>
+
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="nn">---</span>
+<span class="s">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Some</span><span class="nv"> </span><span class="s">title"</span>
+<span class="s">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">sample1</span><span class="pi">,</span> <span class="nv">sample2</span><span class="pi">]</span>
+<span class="s">keywords</span><span class="pi">:</span> <span class="s">keyword1, keyword2, keyword3</span>
+<span class="s">last_updated</span><span class="pi">:</span> <span class="s">Month day, year</span>
+<span class="s">summary</span><span class="pi">:</span> <span class="s2">"</span><span class="s">optional</span><span class="nv"> </span><span class="s">summary</span><span class="nv"> </span><span class="s">here"</span>
+<span class="s">sidebar</span><span class="pi">:</span> <span class="s">sidebarname</span>
+<span class="s">permalink</span><span class="pi">:</span> <span class="s">filename.html</span>
+<span class="nn">---</span>
+</code></pre>
+</div>
+
+<p>(You will customize the values for each of these properties, of course.)</p>
+
+<p>For titles, surrounding the title in quotes is optional, but if you have a colon in the title, you must surround the title with quotation marks. If you have a quotation mark inside the title, escape it first with a backlash <code class="highlighter-rouge">\</code>.</p>
+
+<p>Values for <code class="highlighter-rouge">keywords</code> get populated into the metadata of the page for SEO.</p>
+
+<p>Values for <code class="highlighter-rouge">tags</code> must be defined in your _data/tags.yml list. You also need a corresponding tag file inside the tags folder that follows the same pattern as the other tag files shown in the tags folder. (Jekyll won’t auto-create these tag files.)</p>
+
+<p>If you don’t want the mini-TOC to show on a page (such as for the homepage or landing pages), add <code class="highlighter-rouge">toc: false</code> in the frontmatter.</p>
+
+<p>The <code class="highlighter-rouge">permalink</code> value should be the same as your filename and include the “.html” file extension.</p>
+
+<p>For more detail, see <a href="mydoc_pages.html">Pages</a>.</p>
+
+<h2 id="where-to-store-your-documentation-topics">Where to store your documentation topics</h2>
+
+<p>You can store your files for each product inside subfolders following the pattern shown in the theme. For example, product1, product2, etc, can be stored in their own subfolders inside the _pages directory. Inside _pages, you can store your topics inside sub-subfolders or sub-sub-folders to your heart’s content. When Jekyll builds your site, it will pull the topics into the root directory and use the permalink for the URL.</p>
+
+<p>Note that product1, product2, and mydoc are all just sample content to demonstrate how to add multiple products into the theme. You can freely delete that content.</p>
+
+<p>For more information, see <a href="mydoc_pages.html">Pages</a> and <a href="mydoc_posts.html">Posts</a>.</p>
+
+<h2 id="configure-the-top-navigation">Configure the top navigation</h2>
+
+<p>The top navigation bar’s menu items are set through the _data/topnav.yml file. Use the top navigation bar to provide links for navigating from one product to another, or to navigate to external resources.</p>
+
+<p>For external URLs, use <code class="highlighter-rouge">external_url</code> in the item property, as shown in the example topnav.yml file. For internal links, use <code class="highlighter-rouge">url</code> the same was you do in the sidebar data files.</p>
+
+<p>Note that the topnav has two sections: <code class="highlighter-rouge">topnav</code> and <code class="highlighter-rouge">topnav_dropdowns</code>. The topnav section contains single links, while the <code class="highlighter-rouge">topnav_dropdowns</code> section contains dropdown menus. The two sections are independent of each other.</p>
+
+<h2 id="generating-pdf">Generating PDF</h2>
+
+<p>If you want to generate PDF, you’ll need a license for <a href="http://www.princexml.com/">Prince XML</a>. You will also need to <a href="http://www.princexml.com/doc/installing/">install Prince</a>.  You can generate PDFs by product (but not for every product on the site combined together into one massive PDF). Prince will work even without a license, but it will imprint a small Prince image on the first page, and you’re supposed to buy the license to use it.</p>
+
+<p>If you’re on Windows, install <a href="https://git-for-windows.github.io/">Git Bash client</a> rather than using the default Windows command prompt.</p>
+
+<p>Open up the css/printstyles.css file and customize the email address (<code class="highlighter-rouge">youremail@domain.com</code>) that is listed there. This email address appears in the bottom left footer of the PDF output. You’ll also need to create a PDF configuration file following the examples shown in the pdfconfigs folder, and also customize some build scripts following the same pattern shown in the root: pdf-product1.sh</p>
+
+<p>See the section on <a href="mydoc_generating_pdfs.html">Generating PDFs</a> for more details about setting the theme up for this output.</p>
+
+<h2 id="blogs--news">Blogs / News</h2>
+
+<p>For blog posts, create your markdown files in the _posts folder following the sample formats. Post file names always begin with the date (YYYY-MM-DD-title).</p>
+
+<p>The news/news.html file displays the posts, and the news_archive.html file shows a yearly history of posts. In documentation, you might use the news to highlight product features outside of your documentation, or to provide release notes and other updates.</p>
+
+<p>See <a href="mydoc_posts.html">Posts</a> for more information.</p>
+
+<h2 id="markdown">Markdown</h2>
+
+<p>This theme uses <a href="http://kramdown.gettalong.org/">kramdown markdown</a>. kramdown is similar to Github-flavored Markdown, except that when you have text that intercepts list items, the spacing of the intercepting text must align with the spacing of the first character after the space of a numbered list item. Basically, with your list item numbering, use two spaces after the dot in the number, like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1.  First item
+2.  Second item
+3.  Third item
+</code></pre>
+</div>
+
+<p>When you want to insert paragraphs, notes, code snippets, or other matter in between the list items, use four spaces to indent. The four spaces will line up with the first letter of the list item (the <b>F</b>irst or <b>S</b>econd or <b>T</b>hird).</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1.  First item
+
+    ```
+    alert("hello");
+    ```
+
+2.  Second item
+
+    Some pig!
+
+3.  Third item
+</code></pre>
+</div>
+
+<p>See the topics under “Formatting” in the sidebar for more information.</p>
+
+<h2 id="automated-links">Automated links</h2>
+
+<p>If you want to use an automated system for managing links, see <a href="mydoc_hyperlinks.html#automatedlinks">Automated Links</a>. This approach automatically creates a list of Markdown references to simplify linking.</p>
+
+<h2 id="other-instructions">Other instructions</h2>
+
+<p>The content here is just a getting started guide only. For other details in working with the theme, see the various sections in the sidebar.</p>
+
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+        
+        
+        
+    </div>
+
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Your company. All rights reserved. <br />
+ Site last generated: May 31, 2017 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

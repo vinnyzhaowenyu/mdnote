@@ -1,0 +1,40 @@
+{% if page.sidebar == "home_sidebar" %}
+{% assign sidebar = site.data.sidebars.home_sidebar.entries %}
+
+{% elsif page.sidebar == "note_sidebar" %}
+{% assign sidebar = site.data.sidebars.note_sidebar.entries %}
+
+{% elsif page.sidebar == "devopt_sidebar" %}
+{% assign sidebar = site.data.sidebars.devopt_sidebar.entries %}
+
+{% elsif page.sidebar == "life_sidebar" %}
+{% assign sidebar = site.data.sidebars.life_sidebar.entries %}
+
+{% elsif page.sidebar == "news_sidebar" %}
+{% assign sidebar = site.data.sidebars.news_sidebar.entries %}
+
+{% else %}
+{% assign sidebar = site.data.sidebars.home_sidebar.entries %}
+{% endif %}
+
+
+
+{% comment %}
+sidebar configuration for print files
+{% endcomment %}
+
+{% if site.product == "news" %}
+{% assign sidebar_pdf = site.data.sidebars.news_sidebar.entries %}
+{% endif %}
+
+{% if site.product == "note" %}
+{% assign sidebar_pdf = site.data.sidebars.note_sidebar.entries %}
+{% endif %}
+
+{% if site.product == "devopt" %}
+{% assign sidebar_pdf = site.data.sidebars.devopt_sidebar.entries %}
+{% endif %}
+
+{% if site.product == "life" %}
+{% assign sidebar_pdf = site.data.sidebars.life_sidebar.entries %}
+{% endif %}

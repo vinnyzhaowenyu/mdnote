@@ -1,0 +1,510 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: 技术笔记 
+  version: 1.0
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+###################################### A - 1
+###################################### B - 2
+###################################### C - 3
+# Chrome
+  - title: Chrome
+    output: web, pdf
+    folderitems:
+
+    - title: Chrome多实例
+      url: /note_chrome_mult_instance.html
+      output: web, pdf
+      type: homepage
+
+# Cron 
+  - title: Cron 
+    output: web, pdf
+    folderitems:
+
+    - title: crontab使用 
+      url: /note_crontab_usage.html
+      output: web, pdf
+      type: homepage
+
+
+# Cygwin
+  - title: Cygwin
+    output: web, pdf
+    folderitems:
+
+    - title: Cygwin介绍
+      url: /note_cygwin_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: Cygwin使用 
+      url: /note_cygwin_usage.html
+      output: web, pdf
+      type: homepage
+
+###################################### D - 4 
+# DHCP 
+  - title: DHCP 
+    output: web, pdf
+    folderitems:
+
+    - title: Nginx 
+      url: /note_dhcp_index.html
+      output: web, pdf
+      type: homepage
+
+# Docker 
+  - title: Docker
+    output: web, pdf
+    folderitems:
+
+    - title: Docker介绍 
+      url: /note_docker_index.html
+      output: web, pdf
+      type: homepage
+
+
+# Data-Transfer
+
+  - title: DataTransfer 
+    output: web, pdf
+    folderitems:
+
+    - title: Rsync 
+      url: /note_datatransfer_rsync_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: SCP 
+      url: /note_datatransfer_rsync_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: NFS 
+      url: /note_datatransfer_rsync_index.html
+      output: web, pdf
+      type: homepage
+
+
+###################################### E - 5
+###################################### F - 6
+# Firefox
+  - title: Firefox 
+    output: web, pdf
+    folderitems:
+
+    - title: Firefox多实例
+      url: /note_firefox_mult_instance.html
+      output: web, pdf
+      type: homepage
+
+
+###################################### G - 7
+# Git 
+  - title: Git 
+    output: web, pdf
+    folderitems:
+
+    - title: Git介绍 
+      url: /note_git_index.html
+      output: web, pdf
+      type: homepage
+
+
+
+
+####################################### H - 8
+# H3C 
+  - title: H3C网络设备
+    output: web, pdf
+    folderitems:
+
+    - title: H3C网络设备介绍 
+      url: /note_h3c_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: 汇聚层交换机 
+      url: /note_h3c_psw.html
+      output: web, pdf
+      type: homepage
+
+###################################### I - 9
+# Iptables 
+  - title: Iptables 
+    output: web, pdf
+    folderitems:
+
+    - title: iptables基础 
+      url: /note_iptables_base_syntax.html
+      output: web, pdf
+      type: homepage
+
+# IPMI 
+  - title: IPMI 
+    output: web, pdf
+    folderitems:
+
+    - title: IPMI介绍 
+      url: /note_ipmi_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: IPMI使用
+      url: /note_ipmi_usage.html
+      output: web, pdf
+      type: homepage
+
+###################################### J - 10
+# Jekyll
+  - title: Jekyll 
+    output: web, pdf
+    folderitems:
+
+    - title: Jekyll 介绍
+      url: /note_jekyll_theme_index.html
+      output: web, pdf
+      type: homepage
+ 
+    - title: Jekyll Theme主题使用 
+      url: /note_jekyll_theme_usage.html
+      output: web, pdf
+      type: homepage
+
+    - title: Jekyll Build DockerFile 
+      url: /note_jekyll_theme_centos_dockerfile.html
+      output: web, pdf
+      type: homepage
+ 
+
+###################################### K - 11
+# Kernel
+  - title: 内核参数优化 
+    output: web, pdf
+    folderitems:
+
+    - title: IO调度策略 
+      url: /note_kernel_seurdle.html
+      output: web, pdf
+      type: homepage
+
+###################################### L - 12
+# Linux
+  - title: Linux技术 
+    output: web, pdf
+    folderitems:
+
+    - title: Linux系统时间 
+      url: /note_linux_time.html
+      output: web, pdf
+      type: homepage
+
+# LVS   
+  - title: LVS
+    output: web, pdf
+    folderitems:
+
+    - title: LVS介绍
+      url: /note_lvs_index.html
+      output: web, pdf
+      type: homepage
+
+
+###################################### M - 13 
+# MySQL 
+  - title: MySQL 
+    output: web, pdf
+    folderitems:
+
+    - title: MySQL介绍
+      url: /note_mysql_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: MySQL用户管理 
+      url: /note_mysql_user.html
+      output: web, pdf
+      type: homepage
+
+# Markdown 
+  - title: Markdown 
+    output: web, pdf
+    folderitems:
+
+    - title: Markdown基础语法 
+      url: /note_markdown_base_syntax.html
+      output: web, pdf
+      type: homepage
+
+
+###################################### N - 14 
+# NTP
+  - title: NTP 
+    output: web, pdf
+    folderitems:
+
+    - title: NTP介绍 
+      url: /note_ntp_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: Linux 时间 
+      url: /note_linux_time.html
+      output: web, pdf
+      type: homepage
+
+    - title: NTP配置文件 
+      url: /note_ntp_conf_main.html
+      output: web, pdf
+      type: homepage
+
+    - title: ntpq命令 
+      url: /note_ntp_ntpq.html
+      output: web, pdf
+      type: homepage
+
+###################################### O - 15
+###################################### P - 16 
+###################################### Q - 17 
+###################################### R - 18 
+# Route 
+  - title: Route 
+    output: web, pdf
+    folderitems:
+
+    - title: route命令 
+      url: /note_route_command.html
+      output: web, pdf
+      type: homepage
+
+    - title: ip命令 
+      url: /note_ip_command.html
+      output: web, pdf
+      type: homepage
+
+# RAID 
+  - title: RAID 
+    output: web, pdf
+    folderitems:
+
+    - title: RAID介绍 
+      url: /note_raid_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: MegaCli使用 
+      url: /note_raid_megacli.html
+      output: web, pdf
+      type: homepage
+
+    - title: HPacucli使用 
+      url: /note_raid_hpacucli.html
+      output: web, pdf
+      type: homepage
+
+    - title: Mdadm软Raid管理 
+      url: /note_raid_mdadm.html
+      output: web, pdf
+      type: homepage
+
+# RSYNC 
+  - title: rsync 
+    output: web, pdf
+    folderitems:
+
+    - title: rsync介绍
+      url: /note_rsync_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: rsync命令使用 
+      url: /note_rsync_command.html
+      output: web, pdf
+      type: homepage
+
+    - title: rsync配置 
+      url: /note_rsync_config.html
+      output: web, pdf
+      type: homepage
+
+
+# software install 
+  - title: 软件安装 
+    output: web, pdf
+    folderitems:
+
+    - title: 软件安装介绍
+      url: /note_softinstall_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: rpm 
+      url: /note_softinstall_rpm.html
+      output: web, pdf
+      type: homepage
+
+    - title: yum 
+      url: /note_softinstall_yum.html
+      output: web, pdf
+      type: homepage
+
+    - title: apk 
+      url: /note_softinstall_apk.html
+      output: web, pdf
+      type: homepage
+
+    - title: apt-get 
+      url: /note_softinstall_apt-get.html
+      output: web, pdf
+      type: homepage
+
+###################################### S - 19 
+###################################### S - 19 
+# SSH
+  - title: SSH 
+    output: web, pdf
+    folderitems:
+
+    - title: SSH介绍
+      url: /note_ssh_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: SSH秘钥认证-无密码登录
+      url: /note_ssh_rsa.html
+      output: web, pdf
+      type: homepage
+
+# SystemInstall 
+  - title: 系统安装 
+    output: web, pdf
+    folderitems:
+
+    - title: 系统安装 
+      url: /note_systeminstall_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: Linux PE 
+      url: /note_systeminstall_linuxpe.html
+      output: web, pdf
+      type: homepage
+
+    - title: CentOS全自动安装 
+      url: /note_systeminstall_autoinstall.html
+      output: web, pdf
+      type: homepage
+
+
+###################################### T - 20
+###################################### U - 21
+###################################### V - 22
+# VPN 
+  - title: VPN 
+    output: web, pdf
+    folderitems:
+
+    - title: VPN介绍
+      url: /note_vpn_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: 翻墙
+      url: /note_vpn_fw.html
+      output: web, pdf
+      type: homepage
+
+
+###################################### W - 23
+#Web服务器
+# Nginx 
+  - title: Web服务器 
+    output: web, pdf
+    folderitems:
+
+    - title: Nginx 
+      url: /note_nginx_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: Tengine 
+      url: /note_nginx_tengine.html
+      output: web, pdf
+      type: homepage
+
+    - title: Apache/httpd 
+      url: /note_nginx_tengine.html
+      output: web, pdf
+      type: homepage
+
+    - title: Tomcat 
+      url: /note_nginx_tengine.html
+      output: web, pdf
+      type: homepage
+
+
+# Windows 
+  - title: Windows 
+    output: web, pdf
+    folderitems:
+
+    - title: Nginx 
+      url: /note_win_remotelogin.html
+      output: web, pdf
+      type: homepage
+
+
+###################################### X - 24
+###################################### Y - 25
+###################################### Z - 26
+
+
+###################################### END 
+
+# test 
+  - title: 性能测试
+    output: web, pdf
+    folderitems:
+
+    - title: FIO 
+      url: /note_skill_fio.html
+      output: web, pdf
+      type: homepage
+
+
+# 技巧 
+  - title: 小技巧工具
+    output: web, pdf
+    folderitems:
+
+    - title: 小技巧介绍 
+      url: /note_skill_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: Linux营救模式 
+      url: /note_skill_linuxrescue.html
+      output: web, pdf
+      type: homepage
+
+    - title: Linux screen终端
+      url: /note_skill_index.html
+      output: web, pdf
+      type: homepage
+# Others

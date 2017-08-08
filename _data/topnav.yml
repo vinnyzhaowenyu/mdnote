@@ -1,0 +1,35 @@
+## Topnav single links
+## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
+topnav:
+- title: Topnav
+  items:
+    - title: 技术笔记 
+      url: /note_index.html
+
+- title: Topnav
+  items:
+    - title: 技术运维栈 
+      url: /devopt_index.html
+
+- title: Topnav
+  items:
+    - title: 色彩生活
+      url: /life_index.html
+
+- title: Topnav
+  items:
+    - title: 随心随记 
+      url: /news.html
+
+#Topnav dropdowns
+topnav_dropdowns:
+- title: Topnav dropdowns
+  folders:
+    - title: Links 
+      folderitems:
+        - title: OldBlog 
+          external_url: http://www.zhaowenyu.com
+        - title: Github 
+          external_url: https://github.com/vinnyzhaowenyu
+        - title: 资料 
+          url: /life_index.html

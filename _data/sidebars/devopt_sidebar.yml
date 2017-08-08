@@ -1,0 +1,57 @@
+
+entries:
+- title: sidebar
+  product: 技术运维栈 
+  version: 1.0
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: 技术栈大纲 
+    output: web, pdf
+    folderitems:
+
+    - title: 大纲 
+      url: /devopt_index.html
+      output: web, pdf
+      type: homepage
+
+  - title: 技术运维理解 
+    output: web, pdf
+    folderitems:
+
+    - title: 概念 
+      url: /devopt_concept.html
+      output: web, pdf
+      type: homepage
+
+  - title: 操作系统 
+    output: web, pdf
+    folderitems:
+
+    - title: 操作系统介绍 
+      url: /devopt_os_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: Windows 
+      url: /devopt_os_windows.html
+      output: web, pdf
+      type: homepage
+
+    - title: Linux 
+      url: /devopt_os_linux.html
+      output: web, pdf
+      type: homepage
+

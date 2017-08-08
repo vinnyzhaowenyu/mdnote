@@ -1,0 +1,38 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: 色彩生活 
+  version: 1.0
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: 照片墙 
+    output: web, pdf
+    folderitems:
+
+    - title: 屋前屋后竹绿幽幽 
+      url: /life_picture_a-pile-of-bamboo.html
+      output: web, pdf
+      type: homepage
+
+  - title: 抒情池 
+    output: web, pdf
+    folderitems:
+
+    - title: 关于作者 
+      url: /life_about_author.html
+      output: web, pdf
+      type: homepage
