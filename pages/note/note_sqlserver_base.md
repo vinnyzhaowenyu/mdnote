@@ -1,9 +1,9 @@
 ---
 title: SqlServer基础
-keywords: aa 
+keywords: sqlserver
 last_updated: August 9, 2017
-tags: [getting_started]
-summary: aa 
+tags: [sqlserver]
+summary: sqlserver 
 sidebar: note_sidebar
 permalink: note_sqlserver_base.html
 folder: note 

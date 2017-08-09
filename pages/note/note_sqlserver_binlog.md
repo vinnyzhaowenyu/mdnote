@@ -1,11 +1,11 @@
 ---
-title: sqlserver介绍
+title: sqlserver事务日志
 keywords: sqlserver 
 last_updated: August 9, 2017
-tags: [sqlserver]
-summary: sqlserver 
+tags: [sqlserver,sql,log]
+summary: sqlserver事务日志 
 sidebar: note_sidebar
-permalink: note_sqlserver_index.html
+permalink: note_sqlserver_binlog.html
 folder: note 
 ---
 
