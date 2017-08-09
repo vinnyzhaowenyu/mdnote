@@ -224,14 +224,11 @@ Leave the output as `output: pdf` for these frontmatter pages so that they don't
 
 ## 相关链接和离线预览
 
-这个主题使用相关链接来浏览，因此只需要一个浏览的站点而不需要一个服务器
-This theme uses relative links throughout so that you can view the site offline and not worry about which server or directory you're hosting it. It's common with tech docs to push content to an internal server for review prior to pushing the content to an external server for publication. Because of the need for seamless transferrence from one host to another, the site has to use relative links.
+这个主题使用相关链接来浏览，因此你可以在你的电脑上离线浏览而不需要一个主机或空间。他通常用来在内部服务器上上传一些学习文档提供浏览。由于需要在各个主机间无缝跳转，因此使用了相关链接方式访问。
 
-To view pages locally on your machine (without the Jekyll preview server), they need to have the `.html` extension. The `permalink` property in the page's frontmatter (without surrounding slashes) is what pushes the files into the root directory when the site builds.
+## 页面格式化 
 
-## Page frontmatter
-
-When you write pages, include these same frontmatter properties with each page:
+当编文章时，每个页面都需要有以下的格式内容。
 
 ```yaml
 ---
@@ -245,23 +242,24 @@ permalink: filename.html
 ---
 ```
 
-(You will customize the values for each of these properties, of course.)
+( 你必须在每个页面都指定这些值 ) 
 
-For titles, surrounding the title in quotes is optional, but if you have a colon in the title, you must surround the title with quotation marks. If you have a quotation mark inside the title, escape it first with a backlash `\`.
+对于`title`标题，需要使用双引号括起来。如果标题本身包含双引号，需要使用反斜杠`\`转意。
 
-Values for `keywords` get populated into the metadata of the page for SEO.
+对于`keywords`中的关键词，主要用来提供SEO，便于搜索引擎分析。
 
-Values for `tags` must be defined in your \_data/tags.yml list. You also need a corresponding tag file inside the tags folder that follows the same pattern as the other tag files shown in the tags folder. (Jekyll 不会自动创建tag文件.)
+对于`tags`，必须在\_data/tags.yml中定义。需要在tags目录中创建一致的tag文件，格式可以参考同目录下的其他文件。(Jekyll 不会自动创建tag文件.)
 
-If you don't want the mini-TOC to show on a page (such as for the homepage or landing pages), add `toc: false` in the frontmatter.
+如果你不需要mini-TOC在页面上展示(例如：homepage 或landing pages)，可以增加`toc: false`在页面格式化配置
 
-The `permalink` value should be the same as your filename and include the ".html" file extension.
+对于`permalink`值，应该和文件名相同，但需要以`.html`为后缀。
 
-For more detail, see [Pages][mydoc_pages].
+更多详细内容，查看[Pages][mydoc_pages].
 
-## Where to store your documentation topics
+## 文章保存 
 
-You can store your files for each product inside subfolders following the pattern shown in the theme. For example, product1, product2, etc, can be stored in their own subfolders inside the \_pages directory. Inside \_pages, you can store your topics inside sub-subfolders or sub-sub-folders to your heart's content. When Jekyll builds your site, it will pull the topics into the root directory and use the permalink for the URL.
+可以将文章保存在模板的下的子目录中。例如：product1，product2等等，可以保存在\_pages目录的子目录中。在\_pages目录，你可以保存你的子分类，或者子子分类。当Jekyll构建站点时，会解析这些文件为permalink的URL并保存在一个web根目录中。
+
 
 Note that product1, product2, and mydoc are all just sample content to demonstrate how to add multiple products into the theme. You can freely delete that content.
 
