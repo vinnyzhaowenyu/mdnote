@@ -64,8 +64,18 @@ pages/note/note_how_to_use_jekyll_theme.md
 cd /mdnote && bundle exec jekyll build
 ```
 
+## tag使用
 
+修改tags.yml
+```
+_data/tags.yml
+```
 
+添加pages/tags/xxx.md
+
+```
+pages/tags/tagXXX.md
+```
 
 
 

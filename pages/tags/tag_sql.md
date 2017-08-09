@@ -2,7 +2,7 @@
 title: "sql pages"
 tagName: sql 
 search: exclude
-permalink: sql.html
+permalink: tag_sql.html
 sidebar: note_sidebar
 folder: tags
 ---

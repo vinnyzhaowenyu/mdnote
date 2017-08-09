@@ -2,7 +2,7 @@
 title: "log"
 tagName: log 
 search: exclude
-permalink: log.html
+permalink: tag_log.html
 sidebar: note_sidebar
 folder: tags
 ---
