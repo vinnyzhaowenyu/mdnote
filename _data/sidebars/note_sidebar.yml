@@ -412,6 +412,22 @@ entries:
       type: homepage
 
 
+# SqlServer 
+  - title: SQLSERVER 
+    output: web, pdf
+    folderitems:
+
+    - title: SQLSERVER介绍
+      url: /note_sqlserver_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: SQLSERVER基础
+      url: /note_sqlserver_base.html
+      output: web, pdf
+      type: homepage
+
+
 ###################################### T - 20
 ###################################### U - 21
 ###################################### V - 22
