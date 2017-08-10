@@ -2,3 +2,5 @@ allowed-tags:
   - sqlserver 
   - log
   - sql
+  - ntp
+  - time

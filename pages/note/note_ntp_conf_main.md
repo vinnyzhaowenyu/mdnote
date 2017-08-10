@@ -160,10 +160,10 @@ tinker [ allan allan | dispersion dispersion | freq freq | huffpuff huffpuff | p
 
 ## [peer 时间互相同步]()
 
-For type s addresses (only), this command mobilizes a persistent symmetric-active mode association with the specified remote peer.
+仅对于NTP服务器有效，这个命令指定了多台NTP服务器之间时间同步模式
 
 ```
-peer 172.31.1.1 iburst minpoll 4 maxpoll 6   
+peer 172.31.1.1 iburst minpoll 4 maxpoll 6  perfer   
 peer 172.31.1.2 iburst minpoll 4 maxpoll 6
 ```
 
