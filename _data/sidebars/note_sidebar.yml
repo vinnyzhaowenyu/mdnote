@@ -79,6 +79,21 @@ entries:
       output: web, pdf
       type: homepage
 
+# DNS 
+  - title: DNS
+    output: web, pdf
+    folderitems:
+
+    - title: DNS介绍 
+      url: /note_dns_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: DNS服务搭建
+      url: /note_dns_service.html
+      output: web, pdf
+      type: homepage
+
 
 # Data-Transfer
 
@@ -225,6 +240,25 @@ entries:
       output: web, pdf
       type: homepage
 
+# Linux系统
+  - title: Linux系统 
+    output: web, pdf
+    folderitems:
+
+    - title: /etc/hosts.conf
+      url: /note_linux_file_etc-hosts.html
+      output: web, pdf
+      type: homepage
+
+    - title: /etc/resolve.conf
+      url: /note_linux_file_etc-resolve.html
+      output: web, pdf
+      type: homepage
+
+    - title: /etc/nsswitch.conf
+      url: /note_linux_file_etc-nsswitch.html
+      output: web, pdf
+      type: homepage
 
 ###################################### M - 13 
 # MySQL 

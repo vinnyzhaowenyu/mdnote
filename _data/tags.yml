@@ -4,3 +4,5 @@ allowed-tags:
   - sql
   - ntp
   - time
+  - dns
+  - service
