@@ -424,7 +424,6 @@ entries:
       type: homepage
 
 ###################################### S - 19 
-###################################### S - 19 
 # SSH
   - title: SSH 
     output: web, pdf
@@ -439,6 +438,17 @@ entries:
       url: /note_ssh_rsa.html
       output: web, pdf
       type: homepage
+
+    - title: SSH命令
+      url: /note_ssh_command.html
+      output: web, pdf
+      type: homepage
+
+    - title: SSH代理
+      url: /note_ssh_proxy.html
+      output: web, pdf
+      type: homepage
+
 
 # SystemInstall 
   - title: 系统安装 
