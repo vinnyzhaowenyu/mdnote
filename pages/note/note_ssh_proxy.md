@@ -11,20 +11,19 @@ folder: note
 
 ## SSH本地端口转发(L)
 
+### 原理分析
 
-正向隧道技术,将本地端口通过代理服务器映射到远程服务器的某个端口技术。
+SSH本地端口转发是一种正向隧道技术,是一种将本地端口通过代理服务器映射到远程服务器的某个端口技术。
 
 ```
 ssh -L [listen_Host:]listen_port:DST_Host:DST_port user@Tunnel_Host
 ```
 
+* listen_Host : 可选，监听的机器IP，默认是本地接口。如果指定为IP地址，并且选项加-g时，其他能够访问该机器的机器也可通过该代理来访问远程的的服务。
+* listen_port : 必选，监听的端口，如果是非root用户，指定的端口需要大于1024.
+* DST_Host : 必选，远程提供服务器的机器
+* DST_port : 必选，远程提供服务的端口
 
-推荐命令:
-在SSH Client机器上执行
-```
-ssh -g -N -f -o ServerAliveInterval=60 \
--L <local port>:<remote host>:<remote port> username@<ssh server>
-```
 
 ### 示例环境
 
@@ -32,8 +31,9 @@ ssh -g -N -f -o ServerAliveInterval=60 \
 
 > 现在有3台机器A/B1/B2   
 > A是访问的发起者。IP为20.20.20.20    
+> B网络是一个私网(192.168.1.0/24)    
 > B1是B网络的公网跳板机，能够访问公网和内网。公网IP为30.30.30.30,内网IP为192.168.1.1   
-> B2是B网络内网的一台服务器，只能内网机器访问。内网IP是192.168.1.2   
+> B2是B网络内网的一台服务器，只能内网(192.168.1.0/24)机器访问。内网IP是192.168.1.2   
 
 #### 访问需求
 
