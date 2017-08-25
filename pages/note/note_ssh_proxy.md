@@ -153,9 +153,8 @@ ssh -g -N -f -o ServerAliveInterval=60 -D  60.60.60.60:9999  root@60.60.60.60
 
 ## SSH图形转发(X)
 
+-
 
-
-ssh -C -f -N -D listen_port user@Tunnel_Host
 
 ## 参考
 
