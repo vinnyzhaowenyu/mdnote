@@ -11,10 +11,10 @@ topnav:
     - title: 技术运维栈 
       url: /devopt_index.html
 
-- title: Topnav
-  items:
-    - title: 色彩生活
-      url: /life_index.html
+#- title: Topnav
+#  items:
+#    - title: 色彩生活
+#      url: /life_index.html
 
 - title: Topnav
   items:
