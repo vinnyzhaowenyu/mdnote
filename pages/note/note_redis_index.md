@@ -12,8 +12,14 @@ folder: note
 ## 编译安装
 
 ```
+wget http://download.redis.io/releases/redis-4.0.1.tar.gz
+tar xf redis-4.0.1.tar.gz
+cd redis-4.0.1
 make MALLOC=libc
+make install
 ```
+
+默认会安装在`/usr/loca/bin/`目录，配置文件需要从redis-4.0.1目录中复制`redis.conf`
 
 ### 异常处理
 
