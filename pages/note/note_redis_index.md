@@ -21,16 +21,11 @@ make install
 
 默认会安装在`/usr/loca/bin/`目录，配置文件需要从redis-4.0.1目录中复制`redis.conf`
 
-### 异常处理
-
-http://blog.csdn.net/fygkchina/article/details/51006976
-
 ## 链接登录
 
 ```
 redis-cli -h host -p port -a password
 ```
-
 
 ## 参考资料
 
