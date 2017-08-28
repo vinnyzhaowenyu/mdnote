@@ -491,6 +491,10 @@ entries:
       output: web, pdf
       type: homepage
 
+    - title: Redis数据类型  
+      url: /note_redis_data_type.html
+      output: web, pdf
+      type: homepage
 
 ###################################### T - 20
 ###################################### U - 21
