@@ -156,7 +156,10 @@ entries:
       output: web, pdf
       type: homepage
 
-
+    - title: Github免密码push
+      url: /note_git_ssh.html
+      output: web, pdf
+      type: homepage
 
 
 ####################################### H - 8
