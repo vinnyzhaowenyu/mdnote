@@ -276,21 +276,6 @@ entries:
       type: homepage
 
 ###################################### M - 13 
-# MySQL 
-  - title: MySQL 
-    output: web, pdf
-    folderitems:
-
-    - title: MySQL介绍
-      url: /note_mysql_index.html
-      output: web, pdf
-      type: homepage
-
-    - title: MySQL用户管理 
-      url: /note_mysql_user.html
-      output: web, pdf
-      type: homepage
-
 # Markdown 
   - title: Markdown 
     output: web, pdf
@@ -470,11 +455,21 @@ entries:
       output: web, pdf
       type: homepage
 
-
+# 数据库
 # SqlServer 
-  - title: SQLSERVER 
+  - title: 数据库 
     output: web, pdf
     folderitems:
+
+    - title: MySQL介绍
+      url: /note_mysql_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: MySQL用户管理 
+      url: /note_mysql_user.html
+      output: web, pdf
+      type: homepage
 
     - title: SQLSERVER介绍
       url: /note_sqlserver_index.html
@@ -488,6 +483,11 @@ entries:
 
     - title: SQLSERVER事务日志
       url: /note_sqlserver_binlog.html
+      output: web, pdf
+      type: homepage
+
+    - title: Redis介绍  
+      url: /note_redis_index.html
       output: web, pdf
       type: homepage
 
