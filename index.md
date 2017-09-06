@@ -5,7 +5,7 @@ tags: [links]
 sidebar: note_sidebar
 permalink: index.html
 ---
-|您的支持就是我分享动力|
+||
 |:--:|:--:|
 | <img src="images/alipay-mini.jpg" /> | <img src="images/wepay-mini.jpg"  /> |
 
