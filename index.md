@@ -6,8 +6,10 @@ sidebar: note_sidebar
 permalink: index.html
 ---
 
-<img src="images/alipay.JPG" width="300" height="400" />
-<img src="images/wepay.JPG" width="300" height="400" />
+<div>
+  <img src="images/alipay.JPG" width="300" height="400"  style="float:left" />
+  <img src="images/wepay.JPG" width="300" height="400"  style="float:left" />
+</div>
 
 |常用|
 |---|
