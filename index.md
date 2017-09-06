@@ -6,9 +6,8 @@ sidebar: note_sidebar
 permalink: index.html
 ---
 
-![支付宝](images/alipay.JPG)
-![微信](images/wepay.JPG)
-
+<img src="images/alipay.JPG" width=256 height=256 />
+<img src="images/wepay.JPG" width=256 height=256 />
 
 |常用|
 |---|
