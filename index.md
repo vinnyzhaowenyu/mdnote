@@ -1,10 +1,14 @@
 ---
-title: 链接
+title: About
 keywords: sample homepage
 tags: [links]
 sidebar: note_sidebar
 permalink: index.html
 ---
+
+![支付宝](images/alipay.JPG)
+![微信](images/wepay.JPG)
+
 
 |常用|
 |---|
