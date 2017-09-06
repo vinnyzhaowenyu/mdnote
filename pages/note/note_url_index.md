@@ -3,13 +3,8 @@ title: About
 keywords: sample homepage
 tags: [links]
 sidebar: note_sidebar
-permalink: index.html
+permalink: note_url_index.html
 ---
-
-|:--:|:--:|
-| <img src="images/alipay-mini.jpg" /> | <img src="images/wepay-mini.jpg"  /> |
-
-
 
 |常用|
 |---|
