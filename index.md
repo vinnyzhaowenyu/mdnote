@@ -7,8 +7,8 @@ permalink: index.html
 ---
 
 <center>
-  <img src="images/alipay.JPG" width="256" />
-  <img src="images/wepay.JPG" width="256" />
+  <img src="images/alipay.JPG" width="300" height="400" />
+  <img src="images/wepay.JPG" width="300" height="400" />
 </center>
 
 |常用|
