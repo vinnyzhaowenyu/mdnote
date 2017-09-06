@@ -8,5 +8,3 @@ permalink: index.html
 
 |:--:|:--:|
 | <img src="images/alipay-mini.jpg" /> | <img src="images/wepay-mini.jpg"  /> |
-
-
