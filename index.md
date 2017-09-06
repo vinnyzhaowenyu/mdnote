@@ -7,7 +7,7 @@ permalink: index.html
 ---
 |您的支持就是我分享动力|
 |:--:|:--:|
-| <img src="images/alipay.JPG" width="300" height="400"  /> | <img src="images/wepay.JPG"  width="300" height="400"  /> |
+| <img src="images/alipay-mini.jpg" /> | <img src="images/wepay-mini.jpg"  /> |
 
 
 
