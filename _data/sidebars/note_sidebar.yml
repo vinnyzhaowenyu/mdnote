@@ -514,6 +514,11 @@ entries:
       output: web, pdf
       type: homepage
 
+    - title: Redis配置文件
+      url: /note_redis_config.html
+      output: web, pdf
+      type: homepage
+
 ###################################### T - 20
 ###################################### U - 21
 ###################################### V - 22
