@@ -16,16 +16,16 @@ folder: note
 ### key
 ```
 key "rndc-key" {
-      algorithm hmac-md5;
-      secret "kBw8Lfdsafsdfdsfsdacg==";
+    algorithm hmac-md5;
+    secret "kBw8Lfdsafsdfdsfsdacg==";
 };
 ```
 
 ### controls
 ```
 controls {
-      inet 127.0.0.1 port 953
-      allow { 127.0.0.1; } keys { "rndc-key"; };
+    inet 127.0.0.1 port 953;
+    allow { 127.0.0.1; } keys { "rndc-key"; };
 };
 ```
 
@@ -36,22 +36,23 @@ acl slavedns {
 };
 ```
 
-### 全局配置
+### options 全局配置
+options是named的全局配置
 ```
 options { 
-        listen-on port 53 { 127.0.0.1;0.0.0.0/0 };
-        listen-on-v6 port 53 { ::1; };
-        directory       "/var/named";
-        dump-file       "/var/named/data/cache_dump.db";
-        statistics-file "/var/named/data/named_stats.txt";
-        memstatistics-file "/var/named/data/named_mem_stats.txt";
-        allow-query     { localhost; };
-        recursion yes;
-        dnssec-enable yes;
-        dnssec-validation yes;
-        dnssec-lookaside auto;
-        bindkeys-file "/etc/named.iscdlv.key";
-        managed-keys-directory "/var/named/dynamic";
+    listen-on port 53 { 127.0.0.1;0.0.0.0/0 };
+    listen-on-v6 port 53 { ::1; };
+    directory       "/var/named";
+    dump-file       "/var/named/data/cache_dump.db";
+    statistics-file "/var/named/data/named_stats.txt";
+    memstatistics-file "/var/named/data/named_mem_stats.txt";
+    allow-query     { localhost; };
+    recursion yes;
+    dnssec-enable yes;
+    dnssec-validation yes;
+    dnssec-lookaside auto;
+    bindkeys-file "/etc/named.iscdlv.key";
+    managed-keys-directory "/var/named/dynamic";
 };
 ```
 * listen-on : 监听的端口和提供服务IP，IP可以配置any或0.0.0.0不限制客户端
@@ -71,18 +72,18 @@ options {
 ### logging
 ```
 logging {
-        channel default_debug {
-                file "data/named.run";
-                severity dynamic;
-        };
+    channel default_debug {
+        file "data/named.run";
+        severity dynamic;
+    };
 };
 ```
 
 ### zone
 ```
 zone "." IN { 
-        type hint;
-        file "named.ca";
+    type hint;
+    file "named.ca";
 };
 ```
 * zone : 用来定义一个域，这里点代表根域，全球的根域服务器保存在name.ca文件中   
@@ -100,8 +101,8 @@ zone "test.com" IN {
 
 ```
 zone "0.192.168.in-addr.arpa" IN { //定义一个IP为168.192.0.*反向域区
-type master;
-file "168.192.0";
+    type master;
+    file "168.192.0";
 };
 ```
 
