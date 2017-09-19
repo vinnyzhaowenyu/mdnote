@@ -85,16 +85,17 @@ zone "." IN {
         file "named.ca";
 };
 ```
- /*zone用来定义一个域，这里点代表根域，全球的根域服务器保存在name.ca文件中*/
-/*type用来定义角色。hint表示互联网根域，master表示主域名服务器，slave表示辅助域名服务器*/
-/*file用来指定该域DNS记录文件，默认路径保存在/var/name/中 */
+* zone : 用来定义一个域，这里点代表根域，全球的根域服务器保存在name.ca文件中   
+* type : 用来定义角色。hint表示互联网根域，master表示主域名服务器，slave表示辅助域名服务器   
+* file : 用来指定该域DNS记录文件，默认路径保存在/var/name/中   
 
-zone "test.com" IN { /*定义一具域名为localhost的正向区域*/
+zone "test.com" IN {
     type master;
     file "test.com" ;
     allow-update { none; };
 };
 
+* zone "test.com" :  定义一具域名为localhost的正向区域
 
 zone "0.192.168.in-addr.arpa" IN { //定义一个IP为168.192.0.*反向域区
 type master;
