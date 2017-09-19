@@ -9,10 +9,8 @@ permalink: note_dns_etc-named.html
 folder: note 
 ---
 
-## 配置文件
-
-## /etc/named.conf
-
+## /etc/named.conf 配置文件
+`/etc/named.conf`是DNS协议实现软件bind的进程named的主配置文件,其他部分配置文件会通过include的方式包含在主配置中。
 ### key
 ```
 key "rndc-key" {
@@ -20,6 +18,9 @@ key "rndc-key" {
     secret "kBw8Lfdsafsdfdsfsdacg==";
 };
 ```
+* key :
+* algorithm :
+* secret :
 
 ### controls
 ```
@@ -28,6 +29,9 @@ controls {
     allow { 127.0.0.1; } keys { "rndc-key"; };
 };
 ```
+* controls :
+* inet :
+* allow :
 
 ### 主备DNS配置
 ```
@@ -35,6 +39,8 @@ acl slavedns {
     172.31.57.161;
 };
 ```
+* acl :
+* IPADDR : 
 
 ### options 全局配置
 options是named的全局配置
@@ -78,6 +84,10 @@ logging {
     };
 };
 ```
+* logging :
+* channel :
+* file :
+* severity :
 
 ### zone
 ```
@@ -105,13 +115,13 @@ zone "0.192.168.in-addr.arpa" IN { //定义一个IP为168.192.0.*反向域区
     file "168.192.0";
 };
 ```
-
+* zone "0.192.168.in-addr.arpa" : 
 
 ### include
 ```
-include "/etc/named.rfc1912.zones";    把文件包含进来，
+include "/etc/named.rfc1912.zones";
 include "/etc/named.root.key";
 ```
-
+* include : 把文件包含进来 
 
 {% include links.html %}
