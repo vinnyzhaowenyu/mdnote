@@ -13,16 +13,6 @@ folder: note
 
 ## /etc/named.conf
 
-### option
-PTIONS选项用来定义一些影响整个DNS服务器的环境，如这里的directory用来指定在本文件指定的文件的路径，
-如这里的是将其指定到 /var/named 下,在这里你还可以指定端口等等。不指定则端口是53 
-
-```
-options {
-    directory "/var/named";
-}
-```
-
 ### key
 ```
 key "rndc-key" {
@@ -30,6 +20,7 @@ key "rndc-key" {
       secret "kBw8Lfdsafsdfdsfsdacg==";
 };
 ```
+
 ### controls
 ```
 controls {
@@ -44,29 +35,38 @@ acl slavedns {
     172.31.57.161;
 };
 ```
+
 ### 全局配置
 ```
 options { 
-        listen-on port 53 { 127.0.0.1;0.0.0.0/0 };   监听的端口和提供服务IP，IP可以配置any或0.0.0.0不限制客户端
-        listen-on-v6 port 53 { ::1; };    ipv6的监听
-        directory       "/var/named";住配置文件，这个必须有，而且必须是这个位置，不能修改
-        dump-file       "/var/named/data/cache_dump.db";缓存文件存放的地方，默认没有。要是用rpch dumpdb同步内存
-        statistics-file "/var/named/data/named_stats.txt";       统计dns
-        memstatistics-file "/var/named/data/named_mem_stats.txt";统计dns服务消耗的内存及时间段
-        allow-query     { localhost; };      可以删除
-        recursion yes;  是否解析互联网dns，默认是yes
-
-        dnssec-enable yes;可以删除
-        dnssec-validation yes;可以删除
-        dnssec-lookaside auto;可以删除
-
-        /* Path to ISC DLV key */
+        listen-on port 53 { 127.0.0.1;0.0.0.0/0 };
+        listen-on-v6 port 53 { ::1; };
+        directory       "/var/named";
+        dump-file       "/var/named/data/cache_dump.db";
+        statistics-file "/var/named/data/named_stats.txt";
+        memstatistics-file "/var/named/data/named_mem_stats.txt";
+        allow-query     { localhost; };
+        recursion yes;
+        dnssec-enable yes;
+        dnssec-validation yes;
+        dnssec-lookaside auto;
         bindkeys-file "/etc/named.iscdlv.key";
-
         managed-keys-directory "/var/named/dynamic";
 };
 ```
-
+* listen-on : 监听的端口和提供服务IP，IP可以配置any或0.0.0.0不限制客户端
+* listen-on-v6 : ipv6的监听
+* directory : 住配置文件，这个必须有，而且必须是这个位置，不能修改
+* dump-file : 缓存文件存放的地方，默认没有。要是用rpch dumpdb同步内存
+* statistics-file : 统计dns
+* memstatistics-file : 统计dns服务消耗的内存及时间段
+* allow-query : 
+* recursion : 是否解析互联网dns，默认是yes
+* dnssec-enable : 
+* dnssec-validation :
+* dnssec-lookaside :
+* bindkeys-file :
+* managed-keys-directory :
 
 ### logging
 ```
@@ -89,21 +89,21 @@ zone "." IN {
 * type : 用来定义角色。hint表示互联网根域，master表示主域名服务器，slave表示辅助域名服务器   
 * file : 用来指定该域DNS记录文件，默认路径保存在/var/name/中   
 
+```
 zone "test.com" IN {
     type master;
     file "test.com" ;
     allow-update { none; };
 };
-
+```
 * zone "test.com" :  定义一具域名为localhost的正向区域
 
+```
 zone "0.192.168.in-addr.arpa" IN { //定义一个IP为168.192.0.*反向域区
 type master;
 file "168.192.0";
 };
 ```
-
-
 
 
 ### include
