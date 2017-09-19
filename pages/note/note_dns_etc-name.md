@@ -13,22 +13,40 @@ folder: note
 
 ## /etc/named.conf
 
+### option
+PTIONS选项用来定义一些影响整个DNS服务器的环境，如这里的directory用来指定在本文件指定的文件的路径，
+如这里的是将其指定到 /var/named 下,在这里你还可以指定端口等等。不指定则端口是53 
+
+```
+options {
+    directory "/var/named";
+}
+```
+
+### key
 ```
 key "rndc-key" {
       algorithm hmac-md5;
       secret "kBw8Lfdsafsdfdsfsdacg==";
 };
-
+```
+### controls
+```
 controls {
       inet 127.0.0.1 port 953
       allow { 127.0.0.1; } keys { "rndc-key"; };
 };
+```
 
-acl slavedns {    #主备DNScocomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcocomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcommm配置
+### 主备DNS配置
+```
+acl slavedns { 
     172.31.57.161;
 };
-
-options {  全局配置
+```
+### 全局配置
+```
+options { 
         listen-on port 53 { 127.0.0.1;0.0.0.0/0 };   监听的端口和提供服务IP，IP可以配置any或0.0.0.0不限制客户端
         listen-on-v6 port 53 { ::1; };    ipv6的监听
         directory       "/var/named";住配置文件，这个必须有，而且必须是这个位置，不能修改
@@ -47,19 +65,29 @@ options {  全局配置
 
         managed-keys-directory "/var/named/dynamic";
 };
+```
 
+
+### logging
+```
 logging {
         channel default_debug {
                 file "data/named.run";
                 severity dynamic;
         };
 };
+```
 
-zone "." IN {    /*zone用来定义一个域，这里点代表根域，全球的根域服务器保存在name.ca文件中*/
-        type hint;   /*type用来定义角色。hint表示互联网根域，master表示主域名服务器，slave表示辅助域名服务器*/   
-        file "named.ca"; /*file用来指定该域DNS记录文件，默认路径保存在/var/name/中 */
+### zone
+```
+zone "." IN { 
+        type hint;
+        file "named.ca";
 };
-
+```
+ /*zone用来定义一个域，这里点代表根域，全球的根域服务器保存在name.ca文件中*/
+/*type用来定义角色。hint表示互联网根域，master表示主域名服务器，slave表示辅助域名服务器*/
+/*file用来指定该域DNS记录文件，默认路径保存在/var/name/中 */
 
 zone "test.com" IN { /*定义一具域名为localhost的正向区域*/
     type master;
@@ -72,17 +100,16 @@ zone "0.192.168.in-addr.arpa" IN { //定义一个IP为168.192.0.*反向域区
 type master;
 file "168.192.0";
 };
-
-
-
-
-include "/etc/named.rfc1912.zones";    把文件包含进来，
-include "/etc/named.root.key";
 ```
 
 
 
 
+### include
+```
+include "/etc/named.rfc1912.zones";    把文件包含进来，
+include "/etc/named.root.key";
+```
 
 
 {% include links.html %}
