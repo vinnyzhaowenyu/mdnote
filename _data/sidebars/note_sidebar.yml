@@ -104,25 +104,26 @@ entries:
       output: web, pdf
       type: homepage
 
-    - title: DNS配置文件
-      url: /note_dns_config.html
-      output: web, pdf
-      type: homepage
-
     - title: DNS原理
       url: /note_dns_principle.html
       output: web, pdf
       type: homepage
 
-    - title: /etc/named.conf
+    - title: DNS主配置文件 /etc/named.conf
       url: /note_dns_etc-named.html
       output: web, pdf
       type: homepage
 
-    - title: /var/named/domain.com
+    - title: 域名配置文件 /var/named/domain.com
       url: /note_dns_var-named-domain.html
       output: web, pdf
       type: homepage
+    
+    - title: 客户端配置文件 /etc/resolv.conf  
+      url: /note_dns-etc-resolv.html 
+      output: web, pdf
+      type: homepage
+    
 
 # Data-Transfer
 
