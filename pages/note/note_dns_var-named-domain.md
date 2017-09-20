@@ -45,5 +45,8 @@ ftp           IN       CNAME   ns.server-linux.info.
 * Minimum TTL : 规定缓冲服务器不能与主服务联系上后多长时间清除相应的记录
 
 
+### 配置文件注意事项
+
+* 解析记录行首不能有空格
 
 {% include links.html %}

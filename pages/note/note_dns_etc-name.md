@@ -59,21 +59,23 @@ options {
     dnssec-lookaside auto;
     bindkeys-file "/etc/named.iscdlv.key";
     managed-keys-directory "/var/named/dynamic";
+    forwarders { 192.168.1.1 };
 };
 ```
 * listen-on : 监听的端口和提供服务IP，IP可以配置any或0.0.0.0不限制客户端
 * listen-on-v6 : ipv6的监听
-* directory : 住配置文件，这个必须有，而且必须是这个位置，不能修改
+* directory : 定义域名解析文件的存放位置 
 * dump-file : 缓存文件存放的地方，默认没有。要是用rpch dumpdb同步内存
 * statistics-file : 统计dns
 * memstatistics-file : 统计dns服务消耗的内存及时间段
-* allow-query : 
+* allow-query : 允许的访问列表 
 * recursion : 是否解析互联网dns，默认是yes
 * dnssec-enable : 
 * dnssec-validation :
 * dnssec-lookaside :
 * bindkeys-file :
 * managed-keys-directory :
+* forwarders : 添加forwarders，指向其它DNS服务器
 
 ### logging
 ```
