@@ -5,7 +5,7 @@ last_updated: August 10, 2017
 tags: [dns,service]
 summary: dns 
 sidebar: note_sidebar
-permalink: note_dns_note_dns_principle.html
+permalink: note_dns_principle.html
 folder: note 
 ---
 
