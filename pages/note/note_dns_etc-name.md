@@ -97,7 +97,7 @@ zone "." IN {
 };
 ```
 * zone : 用来定义一个域，这里点代表根域，全球的根域服务器保存在name.ca文件中   
-* type : 用来定义角色。hint表示互联网根域，master表示主域名服务器，slave表示辅助域名服务器   
+* type : 用来定义角色。`hint`表示互联网根域，`master`表示主域名服务器，`slave`表示辅助域名服务器   
 * file : 用来指定该域DNS记录文件，默认路径保存在/var/name/中   
 
 ```
@@ -107,7 +107,7 @@ zone "test.com" IN {
     allow-update { none; };
 };
 ```
-* zone "test.com" :  定义一具域名为localhost的正向区域
+* zone "test.com" :  定义域名为localhost的正向解析域
 
 ```
 zone "0.192.168.in-addr.arpa" IN { //定义一个IP为168.192.0.*反向域区
@@ -115,13 +115,13 @@ zone "0.192.168.in-addr.arpa" IN { //定义一个IP为168.192.0.*反向域区
     file "168.192.0";
 };
 ```
-* zone "0.192.168.in-addr.arpa" : 
+* zone "0.168.192.in-addr.arpa" :  指定IP地址`192.168.0.*`的反向解析域
 
 ### include
 ```
 include "/etc/named.rfc1912.zones";
 include "/etc/named.root.key";
 ```
-* include : 把文件包含进来 
+* include : 把其他配置文件包含进来 
 
 {% include links.html %}
