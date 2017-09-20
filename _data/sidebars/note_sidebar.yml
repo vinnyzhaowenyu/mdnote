@@ -119,7 +119,7 @@ entries:
       output: web, pdf
       type: homepage
 
-    - title: /etc/named.conf
+    - title: /var/named/domain.com
       url: /note_dns_var-named-domain.html
       output: web, pdf
       type: homepage
