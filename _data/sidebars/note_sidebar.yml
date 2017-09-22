@@ -99,13 +99,13 @@ entries:
       output: web, pdf
       type: homepage
 
-    - title: DNS服务搭建
-      url: /note_dns_service.html
+    - title: DNS原理
+      url: /note_dns_principle.html
       output: web, pdf
       type: homepage
 
-    - title: DNS原理
-      url: /note_dns_principle.html
+    - title: DNS服务搭建
+      url: /note_dns_install.html
       output: web, pdf
       type: homepage
 
@@ -331,8 +331,23 @@ entries:
       output: web, pdf
       type: homepage
 
+    - title: Chrony介绍 
+      url: /note_chrony_index_.html
+      output: web, pdf
+      type: homepage
+
 ###################################### O - 15
 ###################################### P - 16 
+# Python 
+  - title: Python 
+    output: web, pdf
+    folderitems:
+
+    - title: Python介绍 
+      url: /note_python_index.html
+      output: web, pdf
+      type: homepage
+
 ###################################### Q - 17 
 ###################################### R - 18 
 # Route 

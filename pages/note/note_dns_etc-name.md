@@ -66,16 +66,19 @@ options {
 * listen-on-v6 : ipv6的监听
 * directory : 定义域名解析文件的存放位置 
 * dump-file : 缓存文件存放的地方，默认没有。要是用rpch dumpdb同步内存
-* statistics-file : 统计dns
+* statistics-file : DNS统计数据列出时就会保存在这个文件中，即收集统计信息
 * memstatistics-file : 统计dns服务消耗的内存及时间段
-* allow-query : 允许的访问列表 
+* allow-query : 是否允许查询,或允许哪些机器查询。可以是any或网段。
+* allow-transfer : 是否允许MASTER 里的信息传到SLAVE服务器，只有在同时拥有MASTER服务器和SLAVE服务器时才设置此项。none为不允许
 * recursion : 是否解析互联网dns，默认是yes
 * dnssec-enable : 
 * dnssec-validation :
 * dnssec-lookaside :
 * bindkeys-file :
 * managed-keys-directory :
-* forwarders : 添加forwarders，指向其它DNS服务器
+* forwarders : 添加forwarders，指向其它DNS服务器。设置向上查找的哪个“合法”的DNS。地址之间要用； 分隔。 （我的理解是此处定义的如同windows里定义的转发一样，当本地DNS服力器解析不了时，转发到你指定的一个DNS服务器上去解析）。当不配置此项时，本机无法解析的都会用name.ca中配置的根服务器上查询，但如果配置了此项，本机查找不到的，就丢给此项中配置的DNS服务器处理。
+* forward only : 让DNS服务器只作为转发服务器，自身不作查询。
+* motify : 当主服务器变更时，向从服务器发送信息。 有两个选项，yes 和no 
 
 ### logging
 ```
