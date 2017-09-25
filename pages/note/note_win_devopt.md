@@ -1,7 +1,7 @@
 ---
 title: Windows运维
 keywords: windows
-last_updated: Sept 14, 2017
+last_updated: September 14, 2017
 tags: [win]
 summary: Windows
 sidebar: note_sidebar
