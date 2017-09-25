@@ -591,7 +591,12 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Nginx 
+    - title: Windows 官方资料 
+      url: /note_win_devopt.html
+      output: web, pdf
+      type: homepage
+
+    - title: Windows远程登录 
       url: /note_win_remotelogin.html
       output: web, pdf
       type: homepage

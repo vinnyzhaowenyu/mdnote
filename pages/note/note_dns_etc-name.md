@@ -10,7 +10,7 @@ folder: note
 ---
 
 ## /etc/named.conf 配置文件
-`/etc/named.conf`是DNS协议实现软件bind的进程named的主配置文件,其他部分配置文件会通过include的方式包含在主配置中。
+`/etc/named.conf`是DNS协议实现软件bind的进程named的主配置文件,其他部分配置文件可以通过include的方式包含在主配置中。
 ### key
 ```
 key "rndc-key" {
