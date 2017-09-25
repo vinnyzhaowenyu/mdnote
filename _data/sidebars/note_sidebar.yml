@@ -601,6 +601,16 @@ entries:
       output: web, pdf
       type: homepage
 
+    - title: Windows 补丁更新(WSUS)
+      url: /note_win_wsus.html
+      output: web, pdf
+      type: homepage
+
+    - title: Windows 网卡聚合(NIC Teaming)
+      url: /note_win_nic_teaming.html
+      output: web, pdf
+      type: homepage
+
 
 ###################################### X - 24
 ###################################### Y - 25
