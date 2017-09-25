@@ -8,6 +8,7 @@ sidebar: note_sidebar
 permalink: note_win_devopt.html
 folder: note 
 ---
+https://docs.microsoft.com/zh-cn/windows-server/windows-server-versions
 
 https://docs.microsoft.com/zh-cn/windows-server/windows-server-2016
 
