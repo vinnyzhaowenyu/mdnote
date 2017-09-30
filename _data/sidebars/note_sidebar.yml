@@ -348,6 +348,11 @@ entries:
       output: web, pdf
       type: homepage
 
+    - title: Python安装
+      url: /note_python_install.html
+      output: web, pdf
+      type: homepage
+
 ###################################### Q - 17 
 ###################################### R - 18 
 # Route 
