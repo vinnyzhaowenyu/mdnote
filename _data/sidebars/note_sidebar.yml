@@ -147,6 +147,22 @@ entries:
       type: homepage
 
 
+# Django 
+
+  - title: Django 
+    output: web, pdf
+    folderitems:
+
+    - title: Django介绍 
+      url: /note_django_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: Django安装
+      url: /note_django_install.html
+      output: web, pdf
+      type: homepage
+
 ###################################### E - 5
 ###################################### F - 6
 # Firefox
