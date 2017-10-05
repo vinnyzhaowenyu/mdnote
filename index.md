@@ -14,3 +14,4 @@ permalink: index.html
 | <img src="images/alipay-mini.jpg" /> | <img src="images/wepay-mini.jpg"  /> |
 ```
 
+[!note_url_index.html](note_url_index.html)
