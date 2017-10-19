@@ -369,6 +369,21 @@ entries:
       output: web, pdf
       type: homepage
 
+# PHP
+  - title: PHP 
+    output: web, pdf
+    folderitems:
+
+    - title: PHP介绍 
+      url: /note_PHP_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: PHP安装
+      url: /note_PHP_install.html
+      output: web, pdf
+      type: homepage
+
 ###################################### Q - 17 
 ###################################### R - 18 
 # Route 
