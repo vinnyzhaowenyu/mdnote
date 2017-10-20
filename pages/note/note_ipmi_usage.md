@@ -101,6 +101,22 @@ Commands:
 	hpm           Update HPM components using PICMG HPM.1 file
 	ekanalyzer    run FRU-Ekeying analyzer using FRU files
 ```
+
+## 带外接口
+
+访问带外时需要指定访问接口类型，没有指定时默认是本地open接口。
+常用的主要有open/lan/lanplus这三种
+
+|接口种类|
+|--|--|
+|open|          Linux OpenIPMI 接口 [默认的接口]|
+|imb |          Intel IMB 接口|
+|lan |           IPMI v1.5 LAN 接口|
+|lanplus   |    IPMI v2.0 RMCP+ LAN 接口|
+|serial-terminal  |  串行接口, 终端模式|
+|serial-basic     |  串行接口, 基础模式|
+|usb       |    IPMI USB 接口(OEM 接口 for AMI 设备) |
+
 ## 传感器信息(sensor)
 
 ### 获取传感器所有数据
@@ -190,7 +206,7 @@ ipmitool chassis bootdev pxe/disk/cdrom
 
 ## MC芯片管理
 
-查看BMC硬件信息
+### 查看BMC硬件信息
 ```
 ipmitool mc info 
 ```
@@ -200,20 +216,23 @@ ipmitool mc info
 /usr/bin/ipmitool bmc reset cold
 ```
 
+### BMC选项
+####  列出BMC所有允许的选项
+```
+Ipmitool  mc getenables 
+```
+列出BMC所有允许的选项
+
+#### 设置BMC选项
+```
+Ipmitool  mc setenables =[on|off] 
+```
+设置bmc相应的允许/禁止选项
 
 
-## 带外接口
 
-|接口种类|
-|--|--|
-|open|          Linux OpenIPMI 接口 [默认的接口]|
-|imb |          Intel IMB 接口|
-|lan |           IPMI v1.5 LAN 接口|
-|lanplus   |    IPMI v2.0 RMCP+ LAN 接口|
-|serial-terminal  |  串行接口, 终端模式|
-|serial-basic     |  串行接口, 基础模式|
-|usb       |    IPMI USB 接口(OEM 接口 for AMI 设备) |
 
+## 带外网络管理
 
 ### 查看带外网络
 
@@ -246,12 +265,5 @@ ipmitool lan print 1
 本地操作 -I open 表示接口本地：ipmitool -I open lan print 1
 操作远程机器 -I lan 表示接口远程：ipmitool -I lan -H 10.1.199.12 -U ADMIN -P ADMIN lan print 1
 ```
-
-服务器温度
-
-```
-ipmitool -H 192.168.12.84 -I lanplus -U test -P 123456 sdr type Temperature
-```
-
 
 {% include links.html %}
