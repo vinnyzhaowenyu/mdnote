@@ -15,6 +15,7 @@ ipmitool这个程序能够使你通过一个kernel设备驱动或者一个远程
 
 ## 获取帮助信息
 ```
+#ipmitool help
 #ipmitool chassis help
 Chassis Commands:  status, power, identify, policy, restart_cause, poh, bootdev, bootparam, selftest
 ```
@@ -58,35 +59,54 @@ Ipmitool –I open sensor thresh
 
 ## 系统事件日志管理 (sel)
 
-### 系统事件日志列表
+### ipmitool sel help 
 ```
-ipmitool sel list
-ipmitool sel elist
+#ipmitool sel help
+SEL Commands:  info clear delete list elist get add time save readraw writeraw interpret
 ```
 
-### 清除系统事件日志
-```
-ipmitool sel clear
-```
+|ipmitool sel [命令] |描述|
+|--|--|
+|info||
+|clear|清除系统事件日志|
+|delete||
+|list|查看系统时间日志列表|
+|elist|查看系统时间日志列表|
+|get||
+|add||
+|time||
+|save||
+|time||
+|save||
+|readraw||
+|writeraw||
+|interpret||
+
 如果系统事件日志量较大，会导致带外存储不足，在获取信息时会卡住。如果确认日志不需要可以清除系统日志
 
-## 电源管理
+## 电源管理(power)
 
+### ipmitool power help
 ```
-ipmitool power reset/on/off/status
+#ipmitool power help
+chassis power Commands: status, on, off, cycle, reset, diag, soft
 ```
 
-|power电源参数|
+|ipmitool power [命令] |描述|
 |--|--|
-|reset | 关闭电源并重启机器 |
-|on | 服务器上电 |
-|off | 服务器下电 |
 |status | 查看电源状态 |
+|on     | 服务器上电 |
+|off    | 服务器下电 |
+|cycle  |-|
+|reset  | 关闭电源并重启机器 |
+|diag   |-|
+|soft   |-|
 
-* -I : 接口类型
-* -H : 带外IP地址
-* -U : 带外登录用户名
-* -P : 带外登录密码
+
+
+
+
+
 
 ## 用户管理
 
@@ -96,24 +116,33 @@ ipmitool -I lanplus -H $host -U $username -P $pwd chassis status
 ```
 远程登录带外并执行命令
 
+* -I : 接口类型
+* -H : 带外IP地址
+* -U : 带外登录用户名
+* -P : 带外登录密码
 
 ## 磁盘管理 
-
 查看底盘状态，其中包括了底盘电源信息，底盘工作状态等
+
+### ipmitool chassis help
 ```
-Ipmitool chassis [options]
+#ipmitool chassis help
+Chassis Commands:  status, power, identify, policy, restart_cause, poh, bootdev, bootparam, selftest
 ```
-|参数|描述|
+
+|ipmitool chassis [命令] |描述|
 |--|--|
 |status| 查看底盘状态，其中包括了底盘电源信息，底盘工作状态等|
-|restart_cause|查看上次系统重启的原因|
+|power||
+|identify||
+|policy||
 |policy list|查看支持的底盘电源相关策略|
+|restart_cause|查看上次系统重启的原因|
+|poh||
+|bootdev| pxe/disk/cdrom 设置下次开机引导方式|
+|bootparam||
+|selftest||
 
-
-### 设置下次开机引导方式
-```
-ipmitool chassis bootdev pxe/disk/cdrom
-```
 
 | bootdev 引导方式设置 |
 | -- | -- |
@@ -122,7 +151,27 @@ ipmitool chassis bootdev pxe/disk/cdrom
 |cdrom | 设置下次启动为 为光盘引导|
 
 
-## MC芯片管理
+## MC芯片管理(mc/bmc)
+
+### #ipmitool bmc help
+```
+#ipmitool bmc help
+MC Commands:
+  reset <warm|cold>
+  guid
+  info
+  watchdog <get|reset|off>
+  selftest
+  getenables
+  setenables <option=on|off> ...
+    recv_msg_intr         Receive Message Queue Interrupt
+    event_msg_intr        Event Message Buffer Full Interrupt
+    event_msg             Event Message Buffer
+    system_event_log      System Event Logging
+    oem0                  OEM 0
+    oem1                  OEM 1
+    oem2                  OEM 2
+```
 
 ### 查看BMC硬件信息
 ```
