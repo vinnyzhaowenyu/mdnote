@@ -375,12 +375,12 @@ entries:
     folderitems:
 
     - title: PHP介绍 
-      url: /note_PHP_index.html
+      url: /note_php_index.html
       output: web, pdf
       type: homepage
 
     - title: PHP安装
-      url: /note_PHP_install.html
+      url: /note_php_install.html
       output: web, pdf
       type: homepage
 

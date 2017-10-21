@@ -13,6 +13,8 @@ ipmitool这个程序能够使你通过一个kernel设备驱动或者一个远程
 这些功能包括打印FRU（现场可替换装置）信息、LAN配置、传感器读数、以及远程机架电源控制。 
 一个本地系统接口的IPMI管理功能需要一个兼容IPMI的kernel驱动程序被安装以及配置。在linux中，这个驱动叫做OpenIPMI，他被包括在了标准化分配中。在Solaris系统中，这个驱动叫做BMC，他被包括在了Solaris 10中。远程控制的管理需要授权以及配置IPMI-over-LAN接口。根据每个系统独特的需要，它可以通过系统接口来使LAN接口使用 ipmitool。
 
+http://blog.csdn.net/zuiaituantuan/article/details/5816380
+
 ## 获取帮助信息
 ```
 #ipmitool help
@@ -103,24 +105,6 @@ chassis power Commands: status, on, off, cycle, reset, diag, soft
 |soft   |-|
 
 
-
-
-
-
-
-## 用户管理
-
-## 远程登录
-```
-ipmitool -I lanplus -H $host -U $username -P $pwd chassis status
-```
-远程登录带外并执行命令
-
-* -I : 接口类型
-* -H : 带外IP地址
-* -U : 带外登录用户名
-* -P : 带外登录密码
-
 ## 磁盘管理 
 查看底盘状态，其中包括了底盘电源信息，底盘工作状态等
 
@@ -164,40 +148,71 @@ MC Commands:
   selftest
   getenables
   setenables <option=on|off> ...
-    recv_msg_intr         Receive Message Queue Interrupt
-    event_msg_intr        Event Message Buffer Full Interrupt
-    event_msg             Event Message Buffer
-    system_event_log      System Event Logging
-    oem0                  OEM 0
-    oem1                  OEM 1
-    oem2                  OEM 2
+    recv_msg_intr         接收消息队列中断
+    event_msg_intr        事件消息缓冲区满中断
+    event_msg             事件消息缓冲区
+    system_event_log      系统事件日志记录
+    oem0                  oem定义选项#0 
+    oem1                  oem定义选项#1 
+    oem2                  oem定义选项#2
 ```
 
-### 查看BMC硬件信息
+| ipmitool bmc [命令]|描述|
+| -- | -- |
+|reset| 指示BMC执行一个warm或cold得复位重启 |
+|guid||
+|info|  显示BMC硬件的信息，包括了设备版本、固件版本、IPMI版本支持、制造商id、额外设备支持的信息|
+|watchdog||
+|selftest||
+|getenables| 列出BMC所有允许的选项|
+|setenables| 设置bmc相应的允许/禁止选项|
+
+## 通道管理 (channel)
+
 ```
-ipmitool mc info 
+#ipmitool channel  help
+Channel Commands: authcap   <channel number> <max privilege>
+                  getaccess <channel number> [user id]
+                  setaccess <channel number> <user id> [callin=on|off] [ipmi=on|off] [link=on|off] [privilege=level]
+                  info      [channel number]
+                  getciphers <ipmi | sol> [channel]
+
+                  setkg hex|plain <key> [channel]
+
+Possible privilege levels are:
+   1   Callback level
+   2   User level
+   3   Operator level
+   4   Administrator level
+   5   OEM Proprietary level
+  15   No access
 ```
 
-### 重启芯片
-```
-/usr/bin/ipmitool bmc reset cold
-```
-
-### BMC选项
-####  列出BMC所有允许的选项
-```
-Ipmitool  mc getenables 
-```
-列出BMC所有允许的选项
-
-#### 设置BMC选项
-```
-Ipmitool  mc setenables =[on|off] 
-```
-设置bmc相应的允许/禁止选项
+|ipmitool channel [命令]|描述|
+|--|--|
+|authcap|显示有关选定的信息通道的身份验证功能，在指定的权限级别|
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
 
 
+## 用户管理
 
+## 远程登录
+```
+ipmitool -I lanplus -H $host -U $username -P $pwd chassis status
+```
+远程登录带外并执行命令
+
+* -I : 接口类型
+* -H : 带外IP地址
+* -U : 带外登录用户名
+* -P : 带外登录密码
 
 ## 带外网络管理
 
