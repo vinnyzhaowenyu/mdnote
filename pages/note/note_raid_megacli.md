@@ -284,6 +284,10 @@ Drive has flagged a S.M.A.R.T alert : No
 
 * Firmware state : 表示磁盘的状态，可以判断磁盘是否损坏。正常状态是`Online, Spun Up`
 
+* Media Type : 磁盘类型，SSD/HDD等
+
+* PD Type : 磁盘接口类型, SATA/SAS
+
 
 ### 查看rebuild进度
 
